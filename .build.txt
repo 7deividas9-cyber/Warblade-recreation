@@ -1,2 +1,0 @@
-Compile command for raylib-cpp on linux: g++ main.cpp -I"$HOME/Apps/raylib-cpp/include" -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -o main
-

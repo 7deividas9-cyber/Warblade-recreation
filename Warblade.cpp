@@ -1,4 +1,7 @@
 #include "raylib-cpp.hpp"
+#include "src/entity.hpp"
+#include "src/tools.hpp"
+#include <vector>
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -10,7 +13,10 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
+    // Texture/Sprite initializations ALWAYS goes AFTER window initialization
     InitWindow(screenWidth, screenHeight, "raylib [core] example - input keys");
+
+    Player player;
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
@@ -29,17 +35,10 @@ int main(void)
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
-
             ClearBackground(RAYWHITE);
-
+            player.Draw();
 		EndDrawing();
         //----------------------------------------------------------------------------------
     }
-
-    // De-Initialization
-    //--------------------------------------------------------------------------------------
-   	// CloseWindow();        // Close window and OpenGL context
-    //--------------------------------------------------------------------------------------
-
     return 0;
 }
