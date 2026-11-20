@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(Warblade LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(raylib CONFIG REQUIRED)
 find_package(raylib_cpp CONFIG REQUIRED)
